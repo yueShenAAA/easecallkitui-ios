@@ -45,10 +45,10 @@
     
     [self.contentView mas_makeConstraints:^(MASConstraintMaker *make) {
         if (@available(iOS 11,*)) {
-            make.top.equalTo(self.view.mas_safeAreaLayoutGuideTop);
+            make.top.equalTo(self.view);
             make.left.equalTo(self.view.mas_safeAreaLayoutGuideLeft);
             make.right.equalTo(self.view.mas_safeAreaLayoutGuideRight);
-            make.bottom.equalTo(self.view.mas_safeAreaLayoutGuideBottom);
+            make.bottom.equalTo(self.view);
         }else {
             make.edges.equalTo(self.view);
          }
