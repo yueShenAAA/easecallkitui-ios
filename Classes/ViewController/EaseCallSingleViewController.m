@@ -95,7 +95,7 @@
     [self.switchToVoice mas_makeConstraints:^(MASConstraintMaker *make) {
             make.width.height.equalTo(@40);
             make.centerX.equalTo(self.switchToVoiceLable);
-        make.bottom.equalTo(self.switchToVoiceLable.mas_top).with.offset(-5);
+            make.bottom.equalTo(self.switchToVoiceLable.mas_top).with.offset(-5);
     }];
     
     if(self.isCaller) {

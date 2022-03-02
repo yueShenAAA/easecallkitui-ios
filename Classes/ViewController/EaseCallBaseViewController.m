@@ -62,7 +62,7 @@
     [self.contentView addSubview:self.miniButton];
     [self.miniButton setTintColor:[UIColor whiteColor]];
     [self.miniButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.contentView);
+        make.top.equalTo(self.contentView).offset(40);
         make.left.equalTo(@10);
         make.width.height.equalTo(@40);
     }];
@@ -269,7 +269,7 @@
     if(!_floatingView)
     {
         _floatingView = [[EaseCallStreamView alloc] init];
-        _floatingView.backgroundColor = [UIColor grayColor];
+        _floatingView.backgroundColor = [UIColor clearColor];
         _floatingView.bgView.image = [UIImage imageNamedFromBundle:@"floating_voice"];
         [_floatingView.bgView mas_updateConstraints:^(MASConstraintMaker *make) {
                 make.width.height.equalTo(@55);
