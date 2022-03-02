@@ -486,6 +486,9 @@ static EaseCallManager *easeCallManager = nil;
 //    if(aType == EaseCallType1v1Video) {
 //        [ext setObject:EMCOMMUNICATE_TYPE_VIDEO forKey:EMCOMMUNICATE_TYPE];
 //    }
+    NSString *strlongitude = [[NSUserDefaults standardUserDefaults] objectForKey:@"lon"];
+    NSString *strlatitude = [[NSUserDefaults standardUserDefaults] objectForKey:@"lat"];
+    [ext addEntriesFromDictionary:@{@"lat":strlatitude,@"lon":strlongitude}];
     EMMessage* msg = [[EMMessage alloc] initWithConversationID:aUid from:self.modal.curUserAccount to:aUid body:msgBody ext:ext];
     __weak typeof(self) weakself = self;
     [[[EMClient sharedClient] chatManager] sendMessage:msg progress:nil completion:^(EMMessage *message, EMError *error) {
