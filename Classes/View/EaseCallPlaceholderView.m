@@ -39,6 +39,8 @@
             make.width.height.equalTo(@70);
             make.center.equalTo(self);
         }];
+        self.placeHolder.layer.cornerRadius = 35.f;
+        self.placeHolder.clipsToBounds = YES;
         
         _activity = [[UIActivityIndicatorView alloc] init];
         if(@available(iOS 13.0, *)) {

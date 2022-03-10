@@ -45,7 +45,7 @@
     [self.inviteButton addTarget:self action:@selector(inviteAction) forControlEvents:UIControlEventTouchUpInside];
     [self.contentView addSubview:self.inviteButton];
     [self.inviteButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.contentView);
+        make.top.equalTo(self.contentView).offset(40);
         make.right.equalTo(self.contentView);
         make.width.height.equalTo(@50);
     }];
@@ -228,7 +228,7 @@
     if(self.localView.displayView)
         count++;
     int index = 0;
-    int top = 40;
+    int top = 88;
     int left = 0;
     int right = 0;
     int colSize = 1;

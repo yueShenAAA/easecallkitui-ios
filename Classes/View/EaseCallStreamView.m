@@ -24,7 +24,6 @@
     if (self) {
         _enableVoice = YES;
         _isTalking = NO;
-        
         self.bgView = [[UIImageView alloc] init];
         self.bgView.contentMode = UIViewContentModeScaleAspectFit;
         self.bgView.userInteractionEnabled = YES;
